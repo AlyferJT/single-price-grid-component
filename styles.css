@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+	--primary-cyan: #2ab2af;
+	--primary-cyan-tint1: #6ac9c7;
+	--primary-cyan-tint2: #95d9d7;
+	--primary-bright-yellow: #c0df34;
+	--neutral-light-gray: #e5eff5;
+	--neutral-grayish-blue: #98a6bd;
+
+	--grid-layout: repeat(2, 1fr);
+}
+
+/*==========================*/
+/*      General Styles      */
+/*==========================*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	font-family: "Karla", sans-serif;
+	background-color: var(--neutral-light-gray);
+
+	letter-spacing: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.h2 {
+	color: #fff;
+	font-weight: 500;
+}
+
+.container {
+	padding: 0 2rem;
+}
+
+.main {
+	max-width: 55rem;
+	display: grid;
+	grid-template-columns: var(--grid-layout);
+
+	box-shadow: 0 0 1.6rem rgb(0, 0, 0, 0.1);
+	border-radius: 0.8rem;
+}
+
+.section-description,
+.section-subscription,
+.section-whyus {
+	padding: 3.2rem;
+}
+
+/*==========================*/
+/*   Section Description    */
+/*==========================*/
+
+.section-description {
+	background-color: #fff;
+	grid-column: 1 / -1;
+
+	border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.section-description-h1 {
+	font-size: 2.2rem;
+	letter-spacing: -0.05rem;
+
+	margin-bottom: 2rem;
+
+	color: var(--primary-cyan);
+}
+
+.section-description-moneyback {
+	font-size: 1.6rem;
+	font-weight: 600;
+
+	margin-bottom: 0.8rem;
+
+	color: var(--primary-bright-yellow);
+}
+
+.section-description-text {
+	font-size: 1.4rem;
+	line-height: 1.5;
+	color: var(--neutral-grayish-blue);
+}
+
+/*==========================*/
+/*   Section Subscription   */
+/*==========================*/
+
+.section-subscription {
+	color: #fff;
+
+	background-color: var(--primary-cyan);
+
+	border-radius: 0 0 0 0.8rem;
+}
+
+.section-subscription-h2 {
+	margin-bottom: 1.6rem;
+}
+
+.section-subscription-price {
+	font-size: 1.2rem;
+	font-weight: 400;
+
+	color: var(--primary-cyan-tint2);
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	margin-bottom: 0.8rem;
+}
+
+.section-subscription-price span {
+	font-size: 2.4rem;
+	color: #fff;
+	font-weight: 700;
+}
+
+.section-subscription-buyinfo {
+	font-size: 1.2rem;
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+
+.section-subscription-cta:link,
+.section-subscription-cta:visited {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.6rem 0;
+
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 700;
+
+	border-radius: 0.4rem;
+
+	box-shadow: 0 0 1.6rem rgb(0, 0, 0, 0.1);
+	background-color: var(--primary-bright-yellow);
+}
+
+.section-subscription-cta:hover,
+.section-subscription-cta:active {
+}
+
+/*==========================*/
+/*      Section Whyus       */
+/*==========================*/
+
+.section-whyus {
+	background-color: var(--primary-cyan-tint1);
+	border-radius: 0 0 0.8rem 0;
+}
+
+.section-whyus-h2 {
+	margin-bottom: 1.6rem;
+}
+
+.section-whyus-features {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+
+	font-size: 1.2rem;
+	font-weight: 100;
+	color: var(--neutral-light-gray);
+}
+
+/*==========================*/
+/*      Media Querys        */
+/*==========================*/
+
+@media (max-width: 600px) {
+	:root {
+		--grid-layout: 1fr;
+	}
+
+	body {
+		display: block;
+		height: auto;
+	}
+
+	.main {
+		max-width: 33rem;
+		margin: 2rem auto;
+	}
+
+	.section-subscription {
+		border-radius: 0;
+	}
+	.section-whyus {
+		border-radius: 0 0 0.8rem 0.8rem;
+	}
+}
