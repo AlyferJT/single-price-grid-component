@@ -2,10 +2,14 @@
 
 :root {
 	--primary-cyan: #2ab2af;
-	--primary-cyan-tint1: #6ac9c7;
+	--primary-cyan-tint1: #3fbab7;
 	--primary-cyan-tint2: #95d9d7;
+
 	--primary-bright-yellow: #c0df34;
+	--primary-bright-yellow-tint1: #c6e248;
+
 	--neutral-light-gray: #e5eff5;
+
 	--neutral-grayish-blue: #98a6bd;
 
 	--grid-layout: repeat(2, 1fr);
@@ -22,7 +26,7 @@
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 80%;
 }
 
 body {
@@ -153,10 +157,14 @@ body {
 
 	box-shadow: 0 0 1.6rem rgb(0, 0, 0, 0.1);
 	background-color: var(--primary-bright-yellow);
+
+	transition: background-color 0.2s, transform 0.2s;
 }
 
 .section-subscription-cta:hover,
 .section-subscription-cta:active {
+	transform: translatey(-0.1rem);
+	background-color: var(--primary-bright-yellow-tint1);
 }
 
 /*==========================*/
